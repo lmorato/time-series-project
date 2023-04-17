@@ -1,18 +1,15 @@
-#################################################################################
-# GLOBALS                                                                       #
-#################################################################################
+.PHONY: help venv install
 
-PROFILE = default
-PROJECT_NAME = Mushroom_Classification
+VENV=.venv
+PYTHON=$(VENV)/bin/python3
 
-#################################################################################
-# COMMANDS                                                                      #
-#################################################################################
+help:
+	@echo "Makefile targets:"
+	@echo "  venv          - Create a virtual environment."
+	@echo "  install       - Install dependencies."
 
-## Install Python Dependencies
-environment: test_environment
-  python3 -m venv .venv
-	source .venv/bin/activate
-	pip install -r requirements-development.txt
+venv:
+	python3 -m venv $(VENV)
 
-## TODO
+install: venv
+	$(PYTHON) -m pip install -r requirements-dev.txt
