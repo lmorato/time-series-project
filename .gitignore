@@ -1,3 +1,10 @@
+# files over 100 MB:
+active_clients.csv
+missing_data.csv
+test_missing_data.csv
+LD2011_2014.txt
+LD2011_2014.txt.zip
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
